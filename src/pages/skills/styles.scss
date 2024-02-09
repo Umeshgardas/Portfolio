@@ -56,3 +56,12 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .skills {
+    &__content-wrapper {
+      flex-direction: column;
+      gap: 80px;
+    }
+  }
+}
