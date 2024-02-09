@@ -45,9 +45,9 @@ const Resume = () => {
                 }}
               >
                 <div className="vertical-timeline-element-title-wrapper">
-                  <h3>{item.title}</h3>
-
-                  <h4>{item.subTitle}</h4>
+                  <h3>
+                    {item.title} {item.subTitle}
+                  </h3>
                 </div>
                 <p className="vertical-timeline-element-title-wrapper-description">
                   {item.description}
@@ -83,9 +83,9 @@ const Resume = () => {
                 }}
               >
                 <div className="vertical-timeline-element-title-wrapper">
-                  <h3>{item.title}</h3>
-
-                  <h4>{item.subTitle}</h4>
+                  <h3>
+                    {item.title}, {item.subTitle}
+                  </h3>
                 </div>
                 <p className="vertical-timeline-element-title-wrapper-description">
                   {item.description}
