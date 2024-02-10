@@ -1,0 +1,34 @@
+@mixin WebkitScrollbarY() {
+  overflow-x: visible;
+  overflow-y: visible;
+
+  &:hover {
+    overflow-y: auto;
+
+    @supports (overflow-y: overlay) {
+      overflow-y: overlay;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background:#ffdd40;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background:#ffdd40;
+  }
+}

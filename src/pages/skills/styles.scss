@@ -52,6 +52,9 @@
           text-transform: uppercase;
           color: var(--yellow-theme-main-color);
         }
+        .rc-progress-line {
+          border-radius: 10px;
+        }
       }
     }
   }

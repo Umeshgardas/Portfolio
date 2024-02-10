@@ -22,6 +22,10 @@ export const skillsData = [
         skillName: "NEXT JS",
         percentage: "60",
       },
+      {
+        skillName: "REDUX",
+        percentage: "50",
+      },
     ],
   },
   {

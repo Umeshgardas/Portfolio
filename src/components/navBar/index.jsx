@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { HiX } from "react-icons/hi";
 import { FaBars, FaReact } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom"; // Import NavLink instead of Link
 import "./styles.scss";
+
 const data = [
   {
     label: "HOME",
@@ -29,6 +30,7 @@ const data = [
     to: "/contact",
   },
 ];
+
 const Navbar = () => {
   const [toggleIcon, setToggleIcon] = useState(false);
 
@@ -39,17 +41,22 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar__container">
-        <Link to={"/"} className="navbar__container__logo">
+        <NavLink to={"/"} className="navbar__container__logo"> {/* Use NavLink */}
           <FaReact size={30} />
-        </Link>
+        </NavLink>
       </div>
 
-      <ul className={`navbar__container__menu ${toggleIcon ? "active" : " "} `}>
-        {data.map((item) => (
-          <li className="navbar__container__menu__item">
-            <Link className="navbar__container__menu__item__links" to={item.to}>
+      <ul className={`navbar__container__menu ${toggleIcon ? "active" : ""}`}> {/* Remove " " from className */}
+        {data.map((item, index) => (
+          <li key={index} className="navbar__container__menu__item">
+            <NavLink
+              exact
+              to={item.to}
+              className="navbar__container__menu__item__links"
+              activeClassName="active-link" // Add activeClassName for active style
+            >
               {item.label}
-            </Link>
+            </NavLink>
           </li>
         ))}
       </ul>
